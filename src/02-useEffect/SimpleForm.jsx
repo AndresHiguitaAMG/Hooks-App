@@ -12,11 +12,11 @@ const SimpleForm = () => {
     const { username, email } = formState;
 
     useEffect(() => {
-        console.log('Use')
+        // console.log('Use')
     }, []);
 
     useEffect(() => {
-        console.log('Usef')
+        // console.log('Usef')
     }, [formState]);
 
     const handleOnChange = e => {
@@ -48,7 +48,9 @@ const SimpleForm = () => {
         onChange={handleOnChange}
         />
 
-        <Message />
+        {
+            (username === "Andres") && <Message /> 
+        }
     </>
   )
 }
