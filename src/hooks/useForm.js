@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-const useForm = ({ initialForm = {} }) => {
+const useForm = (initialForm = {}) => {
   const [formState, setFormState] = useState(initialForm);
 
   const handleOnChange = (e) => {
@@ -10,10 +10,15 @@ const useForm = ({ initialForm = {} }) => {
     });
   };
 
+  const handleResetForm = () => {
+    setFormState(initialForm);
+  }
+
   return {
     ...formState,
     formState,
     handleOnChange,
+    handleResetForm
   };
 };
 
