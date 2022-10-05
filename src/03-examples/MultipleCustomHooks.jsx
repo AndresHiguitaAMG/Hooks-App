@@ -2,12 +2,11 @@ import useCounter from "../hooks/useCounter";
 import useFetch from "../hooks/useFetch";
 
 const MultipleCustomHooks = () => {
+  const { counter, handleIncrement } = useCounter();
   const { data, isLoading, hasError } = useFetch(
-    "https://www.breakingbadapi.com/api/quotes/1"
+    `https://www.breakingbadapi.com/api/quotes/${counter}`
   );
-  console.log(data)
   const { author, quote } = !!data && data[0]; //Hacemos doble negación porque si se da una sola negación me devulve true, pero si la niego dos veces me devuelve false
-  const { handleIncrement } = useCounter();
 
   return (
     <>
@@ -21,7 +20,13 @@ const MultipleCustomHooks = () => {
           <footer className="blockquote-footer">{author}</footer>
         </blockquote>
       )}
-      <button className="btn btn-primary" onClick={() => handleIncrement(...data)}>Next quote</button>
+      <button
+        disabled={isLoading}
+        className="btn btn-primary"
+        onClick={() => handleIncrement()}
+      >
+        Next quote
+      </button>
     </>
   );
 };
