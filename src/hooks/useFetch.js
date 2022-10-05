@@ -12,8 +12,10 @@ function useFetch(url) {
       ...state,
       isLoading: true,
     });
+    
     const resp = await fetch(url);
     const data = await resp.json();
+
     setState({
       data,
       isLoading: false,
