@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const Message = () => {
   const [coords, setCoords] = useState({ x: 0, y: 0 });
