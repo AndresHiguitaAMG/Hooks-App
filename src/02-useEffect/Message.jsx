@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const Message = () => {
+export const Message = () => {
   const [coords, setCoords] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -19,5 +19,3 @@ const Message = () => {
     </>
   );
 };
-
-export default Message;

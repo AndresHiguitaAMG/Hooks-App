@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const CounterApp = () => {
+export const CounterApp = () => {
     const [ state, setCounter] = useState({
       counter1: 10,
       counter2: 20,
@@ -22,5 +22,3 @@ const CounterApp = () => {
     </>
   )
 }
-
-export default CounterApp;

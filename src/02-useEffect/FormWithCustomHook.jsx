@@ -2,7 +2,7 @@
 import { useForm } from "../hooks";
 
 
-const FormWithCustomHook = () => {
+export const FormWithCustomHook = () => {
   const { formState, handleResetForm, handleOnChange, username, email, password } = useForm({
     username: "",
     email: "",
@@ -44,5 +44,3 @@ const FormWithCustomHook = () => {
     </>
   );
 };
-
-export default FormWithCustomHook;

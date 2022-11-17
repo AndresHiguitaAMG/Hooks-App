@@ -1,7 +1,7 @@
 import { useFetch, useCounter } from "../hooks";
 import { LoadingQuote, Quotes } from "./";
 
-const MultipleCustomHooks = () => {
+export const MultipleCustomHooks = () => {
   const { counter, handleIncrement } = useCounter();
   const { data, isLoading, hasError } = useFetch(
     `https://www.breakingbadapi.com/api/quotes/${counter}`
@@ -23,5 +23,3 @@ const MultipleCustomHooks = () => {
     </>
   );
 };
-
-export default MultipleCustomHooks;

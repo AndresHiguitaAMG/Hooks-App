@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Message from "./Message";
 
-const SimpleForm = () => {
+export const SimpleForm = () => {
   const [formState, setFormState] = useState({
     username: "Andres",
     email: "example@google.com",
@@ -50,5 +50,3 @@ const SimpleForm = () => {
     </>
   );
 };
-
-export default SimpleForm;
