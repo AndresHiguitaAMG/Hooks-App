@@ -1,8 +1,13 @@
-import React from 'react'
+import React from "react";
+// import { memo } from "react";
 
-export const Small = ({ value }) => {
+// Hay dos maneras de importar el etodo memo, 
+// pero hay que tener en cuenta si trabajamos con create-react-app o vite, 
+// ya que cambia la manera de importar
+export const Small = React.memo(({ value }) => {
     console.log("Me volvi a dibujar :(");
+
   return (
     <small>{value}</small>
   )
-}
+});
