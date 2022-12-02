@@ -5,14 +5,14 @@ export const CallbackHook = () => {
     const [counter, setCounter] = useState(10);
     
     const increment = useCallback(
-      () => {
-        setCounter((value) => value + 1);
+      (value) => {
+        setCounter((c) => c + value);
       },
       [],
     );
 
     useEffect(() => {
-      increment();
+    //   increment();
     }, [increment])
     
     
