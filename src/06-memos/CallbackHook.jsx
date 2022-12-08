@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect  } from "react"
 import { ShowIncrement } from "./ShowIncrement";
 
 export const CallbackHook = () => {
-    const [counter, setCounter] = useState(10);
+    const [ counter, setCounter ] = useState(10);
     
     const increment = useCallback(
       (value) => {
