@@ -4,6 +4,7 @@ export const Message = () => {
   const [coords, setCoords] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
+    console.log("Message Mounted")
     const onMouseMove = ({ x, y }) => {
       setCoords({ x, y });
     };

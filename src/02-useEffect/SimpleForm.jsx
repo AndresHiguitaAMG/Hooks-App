@@ -1,17 +1,23 @@
 import { useEffect, useState } from "react";
-import Message from "./Message";
+import { Message } from "./Message";
 
 export const SimpleForm = () => {
   const [formState, setFormState] = useState({
     username: "Andres",
-    email: "example@google.com",
+    email: "example@google.com" ,
   });
 
   const { username, email } = formState;
 
+  
   useEffect(() => {
-    // console.log('Use')
+    
   }, []);
+  
+
+  useEffect(() => {
+    // console.log('username')
+  }, [username]);
 
   useEffect(() => {
     // console.log('Usef')
