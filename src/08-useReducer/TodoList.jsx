@@ -1,7 +1,19 @@
-import React from 'react'
+import { TodoItem } from "./TodoItem";
 
-export const TodoList = ({ todo }) => {
+export const TodoList = ({todos = [], handleOnDeleteTodo, handleOnToggleTodo}) => {
+
   return (
-    <div>TodoList</div>
-  )
+    <ul className="list-group">
+      {
+        todos.map(todo => (
+          <TodoItem 
+            key={todo.id}
+            todo={todo}
+            handleOnDeleteTodo={handleOnDeleteTodo}
+            handleOnToggleTodo ={handleOnToggleTodo}       
+          />
+        ))
+      }
+    </ul>
+  );
 }

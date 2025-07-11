@@ -1,3 +1,3 @@
-export * from './LoadingQuote';
+export * from './LoadingMessage';
 export * from './MultipleCustomHooks';
-export * from './Quotes';
+export * from './PokemonCard';
