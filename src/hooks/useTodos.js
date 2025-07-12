@@ -33,18 +33,13 @@ export const useTodos = () => {
             payload: id,
         });
     };
-
-    const todosCount = todos.length;
     
-    const pendingTodosCount = todos.filter(todo => !todo.done).length;
-  
-  
     return {
         todos,
         handleOnNewTodo,
         handleOnDeleteTodo,
         handleOnToggleTodo,
-        todosCount,
-        pendingTodosCount,
+        todosCount: todos.length,
+        pendingTodosCount: todos.filter(todo => !todo.done).length,
   };
 };
