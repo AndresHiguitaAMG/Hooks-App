@@ -27,8 +27,18 @@ export const MultipleCustomHooks = () => {
       {/* ? Si tenemos data, busca el name  */}
       <pre>{data?.name}</pre>
       {/* En la función de decrement evaluo si es mayor 1 y si lo es vuelve al anterior de lo contrario no hace nada, de esta manera controlo que al llegar a uno, el usuario al intentar presionar back estando en el pokémon 1 el boton no haga y nada y de esa manera tampoco muestre un error */}
-      <button className="btn btn-primary mt-2" onClick={() => counter > 1 ? handleDecrement() : null}>Back</button>
-      <button className="btn btn-primary mt-2" onClick={() => handleIncrement()}>Next</button>
+      <button
+        className="btn btn-primary mt-2" 
+        onClick={() => counter > 1 ? handleDecrement() : null}
+        disabled={isLoading}
+      >
+      Back
+      </button>
+      <button
+        className="btn btn-primary mt-2" onClick={() => handleIncrement()}
+        disabled={isLoading}
+      >
+        Next</button>
     </>
   );
 };

@@ -11,7 +11,7 @@ export const PokemonCard = ({name, id, sprites}) => {
 
   return (
     <section style={{height:200, display:"flex", flexDirection:"row"}}>
-        <h2 ref={h2Ref} className="text-capitalize">{name} - {id}</h2>
+        <h2 ref={h2Ref} className="text-capitalize">#{id} - {name}</h2>
         {/* Imagenes */}
         <div>
             {
