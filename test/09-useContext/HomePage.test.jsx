@@ -15,7 +15,6 @@ describe('Pruebas en <HomePage />', () => {
         // screen.debug();
         const preTap = screen.getByLabelText("pre") //area-label
         expect(preTap.innerHTML).toBe("null");
-        expect()
     });
 
      test('debe de mostrar el componente con el usuario', () => {
